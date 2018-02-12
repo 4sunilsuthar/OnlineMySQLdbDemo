@@ -25,13 +25,13 @@ import com.google.android.gms.common.api.Status;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
+    static final int REQ_CODE = 9001;
     LinearLayout profileSection;
     Button btnLogout;
     SignInButton btnLogin;
     TextView tvName, tvEmail;
     ImageView imgProfilePic;
     GoogleApiClient googleApiClient;
-    static final int REQ_CODE = 9001;
     String name, email, imgUrl;
 
     @Override
@@ -46,7 +46,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         imgProfilePic = findViewById(R.id.img_user_profile);
         btnLogin.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
-        profileSection.setVisibility(View.GONE);
+        profileSection.setVisibility(View.INVISIBLE);
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this, this).addApi(Auth.GOOGLE_SIGN_IN_API, googleSignInOptions).build();
 

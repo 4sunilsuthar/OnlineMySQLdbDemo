@@ -70,4 +70,8 @@ public class MainActivity extends AppCompatActivity {
 //        signInActivity.signOut();
 
     }
+
+    public void moveToUserImgFunction(View view) {
+        startActivity(new Intent(this, VolleyExampleActivity.class));//will redirect to Recycler view Activity
+    }
 }

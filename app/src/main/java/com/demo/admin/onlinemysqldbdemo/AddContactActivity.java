@@ -79,7 +79,7 @@ public class AddContactActivity extends AppCompatActivity {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
-                e.getCause();//232323
+
             }
             return "Something went wrong Try Again Never say Never!!!!";
 
