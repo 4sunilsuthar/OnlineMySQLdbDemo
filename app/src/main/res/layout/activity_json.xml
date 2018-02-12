@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_back_image_2"
+    android:orientation="vertical"
+    tools:context="com.demo.admin.onlinemysqldbdemo.JSONActivity">
+
+
+    <Button
+        android:id="@+id/btn_get_notification"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_margin="20sp"
+        android:background="@drawable/button_back_img"
+        android:onClick="getNotification"
+        android:text="Get Notification" />
+
+    <Button
+        android:id="@+id/btn_parse_json"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_margin="20sp"
+        android:background="@drawable/button_back_img"
+        android:onClick="parseJSON"
+        android:text="Parse JSON" />
+
+    <TextView
+        android:id="@+id/tv_json_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:gravity="center"
+        android:text="JSON Appear Here"
+        android:textColor="@color/errorColor"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF8A80"
+        android:text="Running..."
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textSize="35sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="50dip"
+        android:visibility="gone"
+        android:minHeight="20dip" />
+
+</LinearLayout>
+
+
